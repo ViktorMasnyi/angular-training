@@ -1,0 +1,13 @@
+<div class="container">
+  <span>{{product.productName}}</span>
+  <p>{{product.productDescr}}</p>
+  <p>Price:{{product.productPrice}}$</p>
+  <p>ID: {{product.id}}</p>
+  <div>Category: {{ product.productCategory }}</div>
+  <div>ingredients:
+    <ol>
+      <li *ngFor="let i of product.productIngridients">{{i}}</li>
+    </ol>
+  </div>
+  <button (click)="onBuy()">Buy</button>
+</div>
