@@ -1,0 +1,4 @@
+<span *ngIf="cartService.basket.length">Items, added to cart</span>
+<ol>
+  <li *ngFor="let item of cartService.basket">{{ item.productName }}</li>
+</ol>

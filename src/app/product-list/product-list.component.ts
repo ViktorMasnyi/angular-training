@@ -8,12 +8,12 @@ import { Product } from '../product-component/product.model';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  product: Product;
+  products: Product[];
   constructor( public productsService: ProductsService ) { }
 
   ngOnInit() {
-    this.product = this.productsService.getproduct();
-    console.log('from prod-list.ts', this.product);
+    this.products = this.productsService.getproducts();
+    console.log('from prod-list.ts', this.products);
   }
 
 }
